@@ -1,6 +1,4 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-    }
-}
+pub mod block;
+
+pub mod blockchain;
+
