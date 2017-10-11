@@ -1,7 +1,7 @@
 extern crate implementation;
 
 fn main() {
-   let b = implementation::block::create_genesis_block(); 
-   println!("b is {:?}", b);
+   let gen_block = implementation::block::create_genesis_block();
+   let bcn = implementation::blockchain::create_blockchain(gen_block);
+   println!("bcn: {:?}", bcn);
 }
-
