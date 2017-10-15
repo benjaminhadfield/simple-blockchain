@@ -30,7 +30,7 @@ impl Block {
         hasher.input(timestamp.to_string().as_bytes());
         hasher.input(data.as_bytes());
         let hash = hasher.result();
-
+        // Return the new block.
         Block {
             hash: hash,
             previous_hash: previous_hash,
@@ -42,6 +42,7 @@ impl Block {
 }
 
 pub fn create_genesis_block() -> Block {
+    // TODO: Use Block.new()
     let genesis_block = Block {
         index: 0,
         timestamp: time::now_utc().to_timespec().sec,
